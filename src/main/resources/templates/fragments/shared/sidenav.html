@@ -1,0 +1,45 @@
+<div class="bg-light border-right" id="sidebar-wrapper" th:fragment="sidenav">
+    <div class="list-group list-group-flush">
+        <div class="sidebar-heading"><strong>DASHBOARD</strong></div>
+        <a class="list-group-item list-group-item-action bg-light" href="/">
+            Explore
+        </a>
+        <div th:if="${#request.isUserInRole('EMPLOYEE')}">
+            <a class="list-group-item list-group-item-action bg-light"
+               href="/employee/create-rental">
+                Create rental
+            </a>
+            <a class="list-group-item list-group-item-action bg-light"
+               href="/employee/running-rentals">
+                Running rentals
+            </a>
+            <a class="list-group-item list-group-item-action bg-light"
+               href="/employee/create-car">
+                Create Car
+            </a>
+            <a class="list-group-item list-group-item-action bg-light"
+               href="/employee/create-customer/">
+                Create Customer
+            </a>
+
+            <a class="list-group-item list-group-item-action bg-light"
+               href="/employee/charts">
+                follow the performances
+            </a>
+            <a class="list-group-item list-group-item-action bg-light "
+               href="/employee/shopMap">
+                Track car in circulation
+            </a>
+
+            <a class="list-group-item list-group-item-action bg-light "
+               href="">
+                Delete Car
+            </a>
+            <a class="list-group-item list-group-item-action bg-light "
+               href="">
+                Delete Customer
+            </a>
+        </div>
+
+    </div>
+</div>
