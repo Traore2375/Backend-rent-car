@@ -16,6 +16,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
+@Document
 public class Station implements Serializable {
 
     @Id

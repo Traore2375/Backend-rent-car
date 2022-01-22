@@ -16,6 +16,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
+@Document
 public class Rental implements Serializable {
 
     @Id

@@ -9,7 +9,8 @@ import java.util.List;
 
 @Repository
 public interface CarRepository extends JpaRepository<Car, String> {
+    @Query()
     List<Car> findByStation(Station station);
-
+@Query()
     List<Car> findByMileageGreaterThan(Integer mileage);
 }

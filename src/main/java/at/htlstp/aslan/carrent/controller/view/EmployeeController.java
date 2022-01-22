@@ -83,14 +83,14 @@ public class EmployeeController {
         return "fragments/create-customer";
     }
     @GetMapping("/create-car")
-    public String showCreateCarForm(Model model, @ModelAttribute("car") Car car) {
-
+    public String showCreateCarForm(Model model) {
+               model.addAttribute("car",new Car());
         return "fragments/create-car";
     }
-    @PostMapping("/save")
-    public String save( Car car) {
+    @PostMapping("/save-car")
+    public String save( @Valid Car car) {
       carRepository.save(car);
-        return "fragments/create-car";
+        return "fragments/create-rental";
     }
     @GetMapping("/shopMap")
     public String getShopMap(Model model) {
